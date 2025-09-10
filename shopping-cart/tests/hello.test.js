@@ -1,9 +1,15 @@
 const shoppingCart = require('../cart.js');
+const removeItem = require('../cart.js');
+const getTotalItems = require('../cart.js');
 
-describe(addItem + ' was added, ' + removeItem + ' was removed and the total of items are ' + getTotalItems, function() {
-    test('should return a message showing the item added, item removed and total',
+const item = 'apple';
+const cart = 'basket';
+const quantity = 1;
+
+describe(item + ' was added to the ' + cart + ' with a quantity of ' + quantity, function() {
+    test('should return a message showing the item added',
 function() {
-    expect(shoppingCart.addItem('apple').removeItem('orange').getTotalItems(3)).toBe('apple was added, orangewas removed and the total of items are 3')
+    expect(shoppingCart.addItem('apple', 'basket', 1)).toBe('apple was added to the basket with a quantity of 1')
 });
 
 });

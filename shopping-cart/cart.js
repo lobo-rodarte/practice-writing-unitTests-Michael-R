@@ -7,13 +7,13 @@ following methods:
 3. getTotalItems(cart): Returns the total number of items in the cart. 
 */
 
-function addItem(cart, item, quantity) {
+function addItem(item, cart, quantity) {
     if (cart[item]) {
         cart[item] += quantity;
     } else {
         cart[item] = quantity;
     }
-    return 'In ' + cart + ' there is a total of ' + quantity + " " + item;
+    return item + ' was added to the ' + cart + ' with a quantity of ' + quantity;
 }
 
 function removeItem(cart, item) {
@@ -30,4 +30,8 @@ function getTotalItems(cart) {
     }
     return 'The total amount in the cart is ' + total;
 }
-module.exports = { addItem, removeItem, getTotalItems };
+module.exports = {
+    addItem,
+    removeItem,
+    getTotalItems,
+}
