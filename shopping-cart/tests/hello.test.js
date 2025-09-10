@@ -1,4 +1,4 @@
-const shoppingCart = require('./cart.js');
+const shoppingCart = require('../cart.js');
 
 describe(addItem + ' was added, ' + removeItem + ' was removed and the total of items are ' + getTotalItems, function() {
     test('should return a message showing the item added, item removed and total',
